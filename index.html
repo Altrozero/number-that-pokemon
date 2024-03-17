@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number that Pokemon</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="app">
+        <div class="info">
+            <div class="score">
+                <span>Score: </span><span id="score">0</span>
+            </div>
+            <div class="best">
+                <span>Best: </span><span id="best">0</span>
+            </div>
+        </div>
+        <div class="card-holder">
+	        <div class="card" stlye="--card-id: 10;">
+                <div class="blur-number"></div>
+                <div class="blur-number-middle"></div>
+                <div class="holo"></div>
+            </div>
+        </div>
+
+        <form class="guess" onsubmit="event.preventDefault(); submitGuess();">
+            <span class="title">Number That Pokemon!</span><br />
+            <input type="number" id="guess" min="1" max="151" placeholder="???">
+            <button id="submit">></button>
+        </form>
+        <form class="gameover" onsubmit="event.preventDefault(); restartGame();">
+            <span class="title">Game Over</span><br />
+            <span id="correct">0</span>
+            <button id="restart">></button>
+        </form>
+    </div>
+    <div class="footer">
+        <span>Created by <a href="https://mrtimwilson.com/">Tim Wilson</a></span>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
